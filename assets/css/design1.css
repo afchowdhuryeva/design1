@@ -18,10 +18,6 @@ img {
     width: 100%;
 }
 
-body {
-    background-color: lightseagreen;
-}
-
 .menu {
     background-color: black;
     border-radius: 50px;
@@ -39,7 +35,10 @@ body {
     font-size: 12px;
 }
 
+
+
 .toggle {
+    display: none;
     position: relative;
     width: 50px;
     height: 50px;
@@ -112,9 +111,7 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-/* .navbar{
-    display: hidden !important;
-} */
+
 .btn {
     background-color: coral;
     padding: 12px 16px;
@@ -126,8 +123,9 @@ nav ul li a {
 .content-blog {
     display: flex;
     align-items: center;
-    background-color: rgb(23, 75, 23);
-    height: 600px;
+    background-color: rgb(137, 148, 160);
+    border-radius: 20px;
+    /* height: 600px; */
     text-align: center;
     color: white;
     position: relative;
@@ -173,4 +171,73 @@ nav ul li a {
     bottom: 60px;
     left: 45%;
     transform: translateX(-45%);
+}
+
+
+
+
+
+@media (max-width: 1350px) {
+
+}
+@media (max-width: 1200px) {}
+@media (max-width: 1024px) {}
+@media (max-width: 860px) {
+    .toggle {
+        display: block;
+        margin-right: 30px;
+    }
+    .navbar{
+        display: none;
+        text-align: center;
+    }
+    #toggle-bar:checked ~ .wrapper .navbar {
+        display: block;
+        width: 100%;
+        background-color: black;
+    }
+    .menu {
+        flex-wrap: wrap;
+    }
+    .navbar ul li {
+        display: block;
+        margin-top: 10px;
+        margin-left: 30px;
+        padding-bottom: 20px;
+        text-align: center;
+        border-bottom: 2px solid gray;
+        border-radius: 10px;
+    }
+    .navbar ul li a{
+        /* padding-top: 20px; */
+        padding-bottom: 10px;
+    }
+    .content-blog{
+        display: block;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 100px;
+    }
+    .content-block1{
+        margin-right: 10px;
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+    .content-block3 {
+        position: relative;
+        top: 40px;
+        left: 8px;
+    }
+    .content-block4{
+        position: relative;
+        top: 70px;
+    }
+    .title{
+        z-index: 1;
+        top: 40%;
+        left: 45%;
+        transform: translateX(-40%, -45%);
+        font-size: 110px;
+    }
 }
